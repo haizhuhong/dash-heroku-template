@@ -106,13 +106,8 @@ group_columns = ['sex', 'region', 'education_level']
 gss_dropdown = gss_clean[value_columns + group_columns].dropna()
 
 ### Create app
-app = JupyterDash(__name__, external_stylesheets=external_stylesheets)
+app = Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
-
-colors = {
-    'background': '#111111',
-    'text': '#7FDBFF'
-}
 
 app.layout = html.Div(
     [
@@ -186,4 +181,4 @@ def make_figure(x,y):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8051, host='0.0.0.0')
+    app.run_server(debug=True)
