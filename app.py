@@ -143,12 +143,12 @@ app.layout = html.Div(
         html.H4("Barplots with Dropdown Menu"),
         
         html.Div([
-            html.H3("y-axis features"),
+            html.H3("x-axis features"),
             dcc.Dropdown(id='values',
                          options=[{'label': i, 'value': i} for i in value_columns],
                          value='satjob'),
 
-            html.H3("x-axis features"),
+            html.H3("color"),
             dcc.Dropdown(id='groups',
                          options=[{'label': i, 'value': i} for i in group_columns],
                          value='sex')
